@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather widget</title>
+    <style>
+      #root {
+        display: none;
+      }
+    </style>
+    <script>
+      // Check if JavaScript is enabled and load content accordingly
+      document.addEventListener("DOMContentLoaded", function () {
+        var container = document.getElementById("root");
+        container.style.display = "block";
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <style>
+        #nojs-container {
+          display: block;
+        }
+        .custom-link {
+          text-decoration: none;
+          color: black;
+        }
+      </style>
+      <div id="nojs-container">
+        <!-- Fetch non-JavaScript content -->
+        <button class="button">
+          <a class="custom-link" href="http://localhost:4000/weather_nojs"
+            >View Weather</a
+          >
+        </button>
+      </div>
+    </noscript>
+
+    <!-- Displayed when JavaScript is enabled -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
